@@ -8,9 +8,7 @@ import { CircumMobile1 } from "./Icons/Mobile";
 export default function Contact() {
 
     return (
-        <Main isOverflowHidden={false}>
-            <TitleSection title="Contact Me" shadow="Contact" />
-
+        <Main id="contact" isOverflowHidden={false} titleChildren={<TitleSection title="Contact Me" shadow="Contact" />}>
             <div className="flex flex-col lg:items-center lg:flex-row max-w-5xl mx-auto lg:h-[352px] lg:my-16">
                 <div className="w-full sm:w-[70vw] lg:w-[80%] mx-auto min-h-[30vh] 
                 lg:h-auto lg:space-x-0 lg:space-y-10 flex lg:flex-col justify-center lg:justify-normal items-center

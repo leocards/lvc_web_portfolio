@@ -4,9 +4,7 @@ import TitleSection from "./components/TitleSection";
 export default function Projects() {
 
     return (
-        <Main className="">
-            <TitleSection title="Projects" />
-
+        <Main id="projects" className="" titleChildren={<TitleSection title="Projects" />}>
             <div className="mx-auto mt-36 w-32 text-center py-5 relative text-2xl">
                 SOON
 

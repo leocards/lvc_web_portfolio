@@ -1,3 +1,4 @@
+import Main from "./components/Main"
 import TitleSection from "./components/TitleSection"
 import { AkarIconsFacebookFill } from "./Icons/Facebook"
 import { MdiGithub } from "./Icons/Github"
@@ -6,11 +7,9 @@ import { BiLinkedin } from "./Icons/LinkedIn"
 
 export default function AboutMe() {
     return (
-        <main className="min-h-screen relative border-t dark:border-slate-800">
-            <TitleSection title="About Me" shadow="About" />
-
+        <Main id="about" isOverflowHidden={false} titleChildren={<TitleSection title="About Me" shadow="About" shadowSize="text-6xl" />}>
             <div className="flex w-full lg:pb-0 pb-16">
-                <div className="mx-auto flex flex-col lg:flex-row justify-center gap-10 max-w-5xl w-full lg:h-[30rem] lg:mt-4 mt-10 lg:px-0 px-10">
+                <div className="mx-auto flex flex-col lg:flex-row justify-center gap-10 max-w-5xl w-full lg:h-[30rem] lg:mt-4 mt-10 lg:px-0 sm:px-10">
                     <div className="p-4 lg:w-[30rem] w-fit h-full relative mx-auto lg:mx-0 border-b border-color shadow-sm">
                         <div className="border-l border-color absolute lg:-top-10 -top-7 left-0 lg:h-72 h-44" />
                         <div className="border-t dashed absolute top-0 lg:-left-32 -left-16 lg:w-[30rem] w-52" />
@@ -30,14 +29,14 @@ export default function AboutMe() {
                             </div>
                         </div>
 
-                        <div className="w-52 lg:w-full h-52 lg:h-full rounded-md bg-slate-800 relative">
+                        <div className="w-36 xs:w-52 lg:w-full h-52 lg:h-full rounded-md bg-slate-800 relative">
                             {/* image */}
 
                             <div className="flex items-center gap-3 absolute z-10 left-1/2 -translate-x-1/2 bottom-4 rounded text-color bg-white/20 px-2.5 py-1 backdrop-blur-sm border border-white/10">
-                                <AkarIconsFacebookFill className="lg:w-7 lg:h-7 w-5 h-5" />
-                                <BiInstagram className="lg:w-7 lg:h-7 w-5 h-5" />
-                                <BiLinkedin className="lg:w-7 lg:h-7 w-5 h-5" />
-                                <MdiGithub className="lg:w-7 lg:h-7 w-5 h-5" />
+                                <AkarIconsFacebookFill className="lg:w-7 lg:h-7 xs:w-5 w-4 xs:h-5 h-4" />
+                                <BiInstagram className="lg:w-7 lg:h-7 xs:w-5 w-4 xs:h-5 h-4" />
+                                <BiLinkedin className="lg:w-7 lg:h-7 xs:w-5 w-4 xs:h-5 h-4" />
+                                <MdiGithub className="lg:w-7 lg:h-7 xs:w-5 w-4 xs:h-5 h-4" />
                             </div>
                         </div>
                     </div>
@@ -89,15 +88,15 @@ export default function AboutMe() {
                                 </div>
                             </div>
 
-                            <div className="absolute bottom-full left-16 -mb-px flex h-8 items-end overflow-hidden">
-                                <div className="flex -mb-px h-[2px] w-56">
+                            <div className="absolute bottom-full sm:left-16 -mb-px flex h-8 items-end overflow-hidden">
+                                <div className="flex -mb-px h-[2px] w-32 sm:w-56">
                                     <div className="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
                                     <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0)_100%)]"></div>
                                 </div>
                             </div>
 
-                            <div className="absolute right-10 w-fit ml-auto top-full left-16 mt-px flex h-8 items-start overflow-hidden">
-                                <div className="flex -mt-px h-[2px] w-56">
+                            <div className="absolute right-10 w-fit ml-auto top-full sm:left-16 mt-px flex h-8 items-start overflow-hidden">
+                                <div className="flex -mt-px h-[2px] w-32 sm:w-56">
                                     <div className="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
                                     <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0)_100%)]"></div>
                                 </div>
@@ -107,7 +106,7 @@ export default function AboutMe() {
                 </div>
             </div>
 
-        </main>
+        </Main>
     )
 }
 

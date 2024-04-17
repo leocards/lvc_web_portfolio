@@ -10,7 +10,7 @@
     }
 
     body {
-        @apply font-[Geist] !text-slate-800 dark:!text-[#ececec] bg-slate-200/80 dark:bg-[#181A1E];
+        @apply font-[Geist] !text-slate-800 dark:!text-[#ececec] bg-slate-200/70 dark:bg-[#181A1E];
     }
 
     :root {

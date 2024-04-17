@@ -1,9 +1,9 @@
-export default function TitleSection({title, shadow}: {title: string, shadow?: string}) {
+export default function TitleSection({title, shadow, shadowSize = 'text-4xl'}: {title: string, shadow?: string, shadowSize?: string}) {
     return (
         <div className="w-full relative pt-8">
             <div className="relative z-20 mx-auto w-fit py-12">
-                <div className="font-bold text-3xl md:text-4xl text-slate-600 dark:text-inherit">{title}</div>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl md:text-[5rem] font-extrabold opacity-5 uppercase -z-10">
+                <div className="font-bold text-lg sm:text-3xl md:text-4xl text-slate-600 dark:text-inherit">{title}</div>
+                <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-extrabold opacity-5 uppercase -z-10 ${shadowSize} xs:text-6xl md:text-[5rem]`}>
                     {shadow||title}
                 </div>
             </div>

@@ -1,3 +1,4 @@
+import Main from "./components/Main";
 import TitleSection from "./components/TitleSection";
 import TooltipButton from "./components/Tooltip";
 import { BxlJavascript } from "./Icons/Javascript";
@@ -13,10 +14,8 @@ import { MdiLanguageTypescript } from "./Icons/Typescript";
 
 export default function Skills() {
     return (
-        <main className="min-h-screen overflow-x-hidden px-8 sm:px-0 relative border-t dark:border-slate-800">
-            <TitleSection title="Skills" />
-
-            <div className="py-10 px-8 md:px-0">
+        <Main id="skills" className="min-h-screen relative border-t dark:border-slate-800" isOverflowHidden="overflow-x-hidden" titleChildren={<TitleSection title="Skills" />}>
+            <div className="py-10 sm:px-8 md:px-0">
                 <div className="md:max-w-2xl lg:max-w-4xl xl:max-w-5xl lg:h-72 w-full mx-auto relative gap-4">
                     <div className="flex flex-col lg:flex-row w-full h-full">
                         <div className="text-center flex flex-col w-full">
@@ -73,14 +72,14 @@ export default function Skills() {
                     </div>
 
                     <div className="absolute bottom-full sm:left-16 -mb-px flex h-8 items-end overflow-hidden">
-                        <div className="flex -mb-px h-[2px] w-56">
+                        <div className="flex -mb-px h-[2px] w-32 sm:w-56">
                             <div className="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
                             <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0)_100%)]"></div>
                         </div>
                     </div>
 
                     <div className="absolute right-14 -bottom-8 h-8 overflow-hidden">
-                        <div className="flex -mt-px h-[2px] w-56 -scale-x-100">
+                        <div className="flex -mt-px h-[2px] w-32 sm:w-56 -scale-x-100">
                             <div className="w-full flex-none blur-sm [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0.3)_67.19%,rgba(236,72,153,0)_100%)]"></div>
                             <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0)_67.19%,rgba(236,72,153,0)_100%)]"></div>
                         </div>
@@ -88,7 +87,7 @@ export default function Skills() {
 
                     <div className="absolute -ml-10 w-[15rem] sm:w-[20rem] md:w-[40rem] -inset-x-8 top-0 h-px bg-color [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                     <div className="absolute -inset-y-8 left-0 h-[23rem] lg:h-[15rem] w-px bg-color [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-                    <div className="absolute w-[15rem] sm:w-[20rem] md:w-[30rem] lg:w-[40rem] -right-10 bottom-0 h-px bg-color [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+                    <div className="absolute w-[15rem] sm:w-[20rem] md:w-[30rem] lg:w-[40rem] -right-7 sm:-right-10 bottom-0 h-px bg-color [mask-image:linear-gradient(to_right,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                     <div className="absolute right-0 -bottom-10 h-[17rem] lg:h-[15rem] w-px bg-color [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
                 </div>
             </div>
@@ -96,7 +95,7 @@ export default function Skills() {
             <div className="text-color text-xl sm:text-4xl font-bold text-center py-8">
                 I Am Available For Freelance !
             </div>
-        </main>
+        </Main>
     )
 }
 

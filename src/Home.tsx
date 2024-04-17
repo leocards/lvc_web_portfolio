@@ -1,3 +1,4 @@
+import Main from "./components/Main";
 import { PhCode } from "./Icons/Code";
 import { MdiLaravel } from "./Icons/Laravel";
 import { BxlReact } from "./Icons/React";
@@ -6,8 +7,8 @@ import { BxlTailwindCss } from "./Icons/Tailwind";
 export default function HomeSection() {
     return (
         <>
-            <main className="h-screen relative overflow-hidden bg-slate-200/50 dark:bg-[#181A1E]">
-                <div className="mx-auto md:px-0 px-4 w-full sm:max-w-xl lg:max-w-5xl lg:w-full md:max-w-2xl h-[calc(100vh-3.5rem)] text-slate-700 md:pt-36 pt-44">
+            <Main id="home" className="h-screen bg-slate-200/50 dark:bg-[#181A1E]" border="">
+                <div className="mx-auto w-full sm:max-w-xl lg:max-w-5xl lg:w-full md:max-w-2xl h-[calc(100vh-3.5rem)] text-slate-700 md:pt-36 pt-44">
                     <div
                         className="border-b dashed w-60 ml-auto after:border-l after:dashed after:h-24 after:absolute after:ml-60 before:border-l before:dashed
                         before:h-6 before:absolute before:ml-60 before:-mt-6 relative"
@@ -29,7 +30,7 @@ export default function HomeSection() {
                             Full Stack Developer
                             <span className="ml lg:text-[5.5rem] text-blue-600">.</span>
                             <div className="border-b dashed relative mt-3">
-                                <div className="absolute border-b dashed w-24 top-0 -left-[6.1rem]"></div>
+                                <div className="absolute border-b dashed w-10 sm:w-24 top-0 -left-[2.6rem] sm:-left-[6.1rem]"></div>
                             </div>
                         </div>
                         <div className="right-16 h-8 overflow-hidden">
@@ -38,7 +39,7 @@ export default function HomeSection() {
                                 <div className="-ml-[100%] w-full flex-none blur-[1px] [background-image:linear-gradient(90deg,rgba(56,189,248,0)_0%,#0EA5E9_32.29%,rgba(236,72,153,0)_67.19%,rgba(236,72,153,0)_100%)]"></div>
                             </div>
                         </div>
-                        <div className="p-4 rounded-md bg-slate-100 dark:bg-zinc-900 shadow-md flex relative border border-[#ececec]/15 text-sm sm:text-base">
+                        <div className="p-4 rounded-md bg-slate-100 dark:bg-zinc-900 shadow-md flex relative border border-[#ececec]/15 text-[10px] xs:text-sm sm:text-base">
                             <ol className="tabular-nums dark:text-white/50 mr-4">
                                 <li>1</li>
                                 <li>2</li>
@@ -72,14 +73,14 @@ export default function HomeSection() {
 
                 <div
                     className="w-[50rem] h-[50rem] bg-cyan-100 dark:bg-white opacity-[0.35] dark:opacity-[0.5] rounded-full absolute 
-            -top-[65%] lg:left-11 -left-52 pointer-events-none blur-[80px] dark:blur-[300px]"
+                    -top-[65%] lg:left-11 -left-52 pointer-events-none blur-[80px] dark:blur-[300px]"
                 />
 
                 <div
                     className="w-[20rem] h-[20rem] bg-blue-400 dark:bg-blue-300 opacity-[0.25] dark:opacity-[0.4] rounded-full absolute 
-            -top-[25%] lg:left-[19rem] -left-16 pointer-events-none blur-[70px] dark:blur-[130px]"
+                    -top-[25%] lg:left-[19rem] -left-16 pointer-events-none blur-[70px] dark:blur-[130px]"
                 />
-            </main>
+            </Main>
         </>
     );
 }

@@ -19,7 +19,7 @@ export default function ContactForm() {
     }
 
     return (
-        <div className="px-4 py-4 lg:py-0 w-full">
+        <div className="sm:px-4 py-4 lg:py-0 w-full">
             <form action="" onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 group">
                     <Input {...register('name', { required: "Name is required" })} placeholder="Name" className="w-full border-b focus-within:border-solid placeholder-shown:dashed border-color placeholder:font-light text-sm transition-200 focus:bg-slate-200 placeholder-shown:bg-transparent placeholder-shown:dark:bg-transparent bg-slate-200 dark:bg-color dark:focus:bg-color" />

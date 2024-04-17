@@ -6,16 +6,19 @@ export interface InputProps
 export interface TextAreaProps
     extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
 
-export interface TabProps {
+export interface TabProps
+    extends React.ButtonHTMLAttributes<HTMLButtonElement>, React.HTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode,
-    className?: String,
+    className?: string,
     active?: boolean,
     as?: "button"|"div",
 }
 
-export interface MainProps {
-    children: React.ReactNode,
-    className?: string,
-    isOverflowHidden?: boolean,
-    border?: string
+export interface MainProps 
+    extends React.HTMLAttributes<HTMLElement> {
+        children: React.ReactNode,
+        className?: string,
+        isOverflowHidden?: boolean|string,
+        border?: string,
+        titleChildren?: React.ReactNode
 }

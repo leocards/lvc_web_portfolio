@@ -1,12 +1,15 @@
 import { MainProps } from "@/utility/componentProps"
 
-export default function Main({children, className = "", isOverflowHidden = true, border = 'border-t'}: MainProps) {
+export default function Main({children, className = "", isOverflowHidden = true, border = 'border-t', ...props}: MainProps) {
     return (
         <main
-            className={`min-h-screen relative px-8 sm:px-0 dark:border-slate-800 border-slate-300/70
-            ${isOverflowHidden?'overflow-hidden':''} ${border} ${className}`}
+            id={props.id}
+            className={`min-h-screen relative dark:border-slate-800 border-slate-300/70 ${isOverflowHidden&&(typeof isOverflowHidden !== "string")?' overflow-hidden':(isOverflowHidden?isOverflowHidden:'')} ${border} ${className}`}
         >
-            {children}
+            {props.titleChildren}
+            <div className="px-8 sm:px-0">
+                {children}
+            </div>
         </main>
     )
 }
