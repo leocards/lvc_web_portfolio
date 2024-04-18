@@ -26,12 +26,13 @@ const Grid = (props: GridProps) => {
 
 interface GridCardProps extends React.HTMLAttributes<HTMLElement> {
     children: React.ReactNode,
-    contentClass?: string
+    contentClass?: string,
+    className?: string
 }
 
-export const GridCard = ({ children, contentClass, ...props }: GridCardProps) => {
+export const GridCard = ({ children, contentClass, className, ...props }: GridCardProps) => {
     return <div className="p-2">
-        <Card {...props} className={cn("h-72 overflow-hidden !bg-white/60 dark:!bg-[#181A1E]", ...props.className??'')}>
+        <Card {...props} className={cn("h-72 overflow-hidden !bg-white/60 dark:!bg-[#181A1E]", className)}>
             <CardContent className={cn(
                 "",
                 contentClass
