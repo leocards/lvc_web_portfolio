@@ -7,11 +7,17 @@ export default function TopNavigation() {
 
     const [activeTab, setActiveTab] = useState('home')
 
-    const scrollTo = (id: string) => {
-        const element = document.getElementById(id)
-        element?.scrollIntoView({
-            behavior: 'smooth'
-        })
+    const scrollTo = (elementId: string, otherEvent?: boolean) => {
+        const element = document.getElementById(elementId)
+        if(otherEvent) {
+            setTimeout(() => element?.scrollIntoView({
+                behavior: 'smooth'
+            }), 450)
+        } else {
+            element?.scrollIntoView({
+                behavior: 'smooth'
+            })
+        }
     }
 
     return (
@@ -26,7 +32,7 @@ export default function TopNavigation() {
                 <Tabs className={``} active={activeTab == 'contact'} onClick={() => {scrollTo("contact"); setActiveTab('contact')}}>Contact</Tabs>
             </div>
 
-            <DrawerDialog />
+            <DrawerDialog  onClick={scrollTo} />
             <ModeToggle />
         </nav>
     )
