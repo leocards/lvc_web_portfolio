@@ -19,7 +19,7 @@ export default function Skills() {
                 <div className="md:max-w-2xl lg:max-w-4xl xl:max-w-5xl lg:h-72 w-full mx-auto relative gap-4">
                     <div className="flex flex-col lg:flex-row w-full h-full">
                         <div className="text-center flex flex-col w-full">
-                            <Label className="py-4 w-full border-b border-r dashed inline-block text-center">Front-End</Label>
+                            <Label className="py-4 w-full border-b border-t !border-t-transparent border-r dashed inline-block text-center">Front-End</Label>
                             <div className="grow flex items-center border-b border-r dashed p-2 min-h-[7rem]">
                                 <Grid>
                                     <TooltipButton tooltip="TailwindCSS">
@@ -41,7 +41,7 @@ export default function Skills() {
                             </div>
                         </div>
                         <div className="text-center flex flex-col w-full">
-                            <Label className="py-4 w-full border-b border-r dashed inline-block text-center">Back-End</Label>
+                            <Label className="py-4 w-full border-b border-t !border-t-transparent border-r dashed inline-block text-center">Back-End</Label>
                             <div className="grow flex items-center lg:border-r dashed p-2 min-h-[7rem]">
                                 <Grid>
                                     <TooltipButton tooltip="PHP">
