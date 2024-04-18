@@ -4,6 +4,7 @@ import { AkarIconsFacebookFill } from "./Icons/Facebook"
 import { MdiGithub } from "./Icons/Github"
 import { BiInstagram } from "./Icons/Intagram"
 import { BiLinkedin } from "./Icons/LinkedIn"
+import profile from "./assets/IMG_6405_edited.png"
 
 export default function AboutMe() {
     return (
@@ -30,7 +31,7 @@ export default function AboutMe() {
                         </div>
 
                         <div className="w-36 xs:w-52 lg:w-full h-52 lg:h-full rounded-md bg-slate-800 relative overflow-hidden">
-                            <img src="./public/IMG_6405_edited.png" alt="profile" className="object-cover w-full h-[20rem] lg:h-[40rem]" />
+                            <img src={profile} alt="profile" className="object-cover w-full h-[20rem] lg:h-[40rem]" />
                             <div className="flex items-center gap-3 absolute z-10 left-1/2 -translate-x-1/2 bottom-4 rounded text-color bg-white/20 px-2.5 py-1 backdrop-blur-sm border border-white/10">
                                 <a href="https://www.facebook.com/leomas.cardenio" target="_blank"><AkarIconsFacebookFill className="lg:w-7 lg:h-7 xs:w-5 w-4 xs:h-5 h-4" /></a>
                                 <a href="#"><BiInstagram className="lg:w-7 lg:h-7 xs:w-5 w-4 xs:h-5 h-4" /></a>
