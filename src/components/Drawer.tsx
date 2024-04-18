@@ -6,7 +6,6 @@ import {
 } from "@/components/ui/drawer"
 import { Menu } from "lucide-react"
 import { Tabs } from "./component"
-import React from "react"
 
 export default function DrawerDialog({ onClick }: {onClick: (arg: string, otherEvent: boolean) => void}) {
     return (
