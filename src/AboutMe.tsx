@@ -29,14 +29,13 @@ export default function AboutMe() {
                             </div>
                         </div>
 
-                        <div className="w-36 xs:w-52 lg:w-full h-52 lg:h-full rounded-md bg-slate-800 relative">
-                            {/* image */}
-
+                        <div className="w-36 xs:w-52 lg:w-full h-52 lg:h-full rounded-md bg-slate-800 relative overflow-hidden">
+                            <img src="./src/assets/IMG_6405_edited.png" alt="profile" className="object-cover w-full h-[20rem] lg:h-[40rem]" />
                             <div className="flex items-center gap-3 absolute z-10 left-1/2 -translate-x-1/2 bottom-4 rounded text-color bg-white/20 px-2.5 py-1 backdrop-blur-sm border border-white/10">
-                                <AkarIconsFacebookFill className="lg:w-7 lg:h-7 xs:w-5 w-4 xs:h-5 h-4" />
-                                <BiInstagram className="lg:w-7 lg:h-7 xs:w-5 w-4 xs:h-5 h-4" />
-                                <BiLinkedin className="lg:w-7 lg:h-7 xs:w-5 w-4 xs:h-5 h-4" />
-                                <MdiGithub className="lg:w-7 lg:h-7 xs:w-5 w-4 xs:h-5 h-4" />
+                                <a href="https://www.facebook.com/leomas.cardenio" target="_blank"><AkarIconsFacebookFill className="lg:w-7 lg:h-7 xs:w-5 w-4 xs:h-5 h-4" /></a>
+                                <a href="#"><BiInstagram className="lg:w-7 lg:h-7 xs:w-5 w-4 xs:h-5 h-4" /></a>
+                                <a href="https://www.linkedin.com/in/leomas-cardenio-48832620a/" target="_blank"><BiLinkedin className="lg:w-7 lg:h-7 xs:w-5 w-4 xs:h-5 h-4" /></a>
+                                <a href="https://github.com/leocards" target="_blank"><MdiGithub className="lg:w-7 lg:h-7 xs:w-5 w-4 xs:h-5 h-4" /></a>
                             </div>
                         </div>
                     </div>
@@ -47,7 +46,7 @@ export default function AboutMe() {
                         </div>
 
                         <div className="mt-5 dark:opacity-75 dark:font-light text-center lg:text-left">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab id, distinctio suscipit eveniet amet possimus optio officiis atque animi quod! Omnis mollitia voluptas accusamus earum id quisquam, minima repellendus incidunt.
+                            I am a versatile web app developer skilled in both front-end and back-end development.
                         </div>
 
                         <div className="border-b md:border-r border-color relative md:grid md:grid-cols-2 md:grid-rows-3 mt-16 md:h-64">
