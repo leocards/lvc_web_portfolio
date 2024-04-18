@@ -15,7 +15,7 @@ export default function DrawerDialog({ onClick }: {onClick: (arg: string, otherE
             </DrawerTrigger>
 
             <DrawerContent>
-                <div className="my-4 mx-auto w-52 space-y-3">
+                <div className="my-4 mx-auto w-52 space-y-3 select-none">
                     <DrawerClose className="w-full" onClick={() => onClick('home', true)}>
                         <Tabs className="!py-3" as="div">Home</Tabs>
                     </DrawerClose>
