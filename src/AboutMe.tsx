@@ -5,10 +5,12 @@ import { MdiGithub } from "./Icons/Github"
 import { BiInstagram } from "./Icons/Intagram"
 import { BiLinkedin } from "./Icons/LinkedIn"
 import profile from "./assets/IMG_6405_edited.png"
+import InViewPage from "./components/InViewPage"
 
-export default function AboutMe() {
+export default function AboutMe({ onView }:{ onView: (inView: boolean) => void }) {
     return (
         <Main id="about" isOverflowHidden={false} titleChildren={<TitleSection title="About Me" shadow="About" shadowSize="text-6xl" />}>
+            <InViewPage onView={(inView) => onView(inView)} />
             <div className="flex w-full lg:pb-0 pb-16">
                 <div className="mx-auto flex flex-col lg:flex-row justify-center gap-10 max-w-5xl w-full lg:h-[30rem] lg:mt-4 mt-10 lg:px-0 sm:px-10">
                     <div className="p-4 lg:w-[30rem] w-fit h-full relative mx-auto lg:mx-0 border-b border-color shadow-sm">

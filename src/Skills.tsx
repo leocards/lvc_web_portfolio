@@ -1,3 +1,4 @@
+import InViewPage from "./components/InViewPage";
 import Main from "./components/Main";
 import TitleSection from "./components/TitleSection";
 import TooltipButton from "./components/Tooltip";
@@ -12,9 +13,10 @@ import { BxlReact } from "./Icons/React";
 import { BxlTailwindCss } from "./Icons/Tailwind";
 import { MdiLanguageTypescript } from "./Icons/Typescript";
 
-export default function Skills() {
+export default function Skills({ onView }:{ onView: (inView: boolean) => void }) {
     return (
         <Main id="skills" className="min-h-screen relative border-t dark:border-slate-800" isOverflowHidden="overflow-x-hidden" titleChildren={<TitleSection title="Skills" />}>
+            <InViewPage onView={(inView) => onView(inView)} />
             <div className="py-10 sm:px-8 md:px-0">
                 <div className="md:max-w-2xl lg:max-w-4xl xl:max-w-5xl lg:h-72 w-full mx-auto relative gap-4">
                     <div className="flex flex-col lg:flex-row w-full h-full">

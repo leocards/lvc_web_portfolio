@@ -3,11 +3,13 @@ import { PhCode } from "./Icons/Code";
 import { MdiLaravel } from "./Icons/Laravel";
 import { BxlReact } from "./Icons/React";
 import { BxlTailwindCss } from "./Icons/Tailwind";
+import InViewPage from "./components/InViewPage";
 
-export default function HomeSection() {
+export default function HomeSection({ onView }:{ onView: (inView: boolean) => void }) {
     return (
         <>
             <Main id="home" className="h-screen bg-slate-200/50 dark:bg-[#181A1E]" border="">
+                <InViewPage onView={(inView) => onView(inView)} />
                 <div className="mx-auto w-full sm:max-w-xl lg:max-w-5xl lg:w-full md:max-w-2xl h-[calc(100vh-3.5rem)] text-slate-700 md:pt-36 pt-44">
                     <div
                         className="border-b dashed w-60 ml-auto after:border-l after:dashed after:h-24 after:absolute after:ml-60 before:border-l before:dashed

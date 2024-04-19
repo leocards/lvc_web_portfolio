@@ -1,12 +1,8 @@
 import { Tabs } from "@/components/component"
 import DrawerDialog from "@/components/Drawer"
 import { ModeToggle } from "@/components/theme-mode-toggle"
-import { useState } from "react"
 
-export default function TopNavigation() {
-
-    const [activeTab, setActiveTab] = useState('home')
-
+export default function TopNavigation({activeTab, setActiveTab}: {activeTab: string, setActiveTab: (tab: string) => void}) {
     const scrollTo = (elementId: string, otherEvent?: boolean) => {
         const element = document.getElementById(elementId)
         if(otherEvent) {
