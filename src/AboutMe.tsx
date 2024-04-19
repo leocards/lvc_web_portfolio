@@ -48,14 +48,14 @@ export default function AboutMe({ onView }:{ onView: (inView: boolean) => void }
                             My name is <span className="text-blue-500 uppercase font-semibold">Leomas</span>
                         </div>
 
-                        <div className="mt-5 dark:opacity-75 dark:font-light text-center lg:text-left">
-                            I am a versatile web app developer skilled in both front-end and back-end development.
+                        <div className="mt-3 dark:opacity-75 dark:font-light text-center lg:text-left text- sm">
+                            I am a versatile web app developer skilled in both front-end and back-end development. With a strong sense of design and a deep enthusiasm for building smooth user experiences, I create visually stunning and highly functional front-end interfaces. Backed by my proficiency in back-end development, I ensure that the system is powered by seamless and efficient processes, delivering optimal performance and scalability.
                         </div>
 
-                        <div className="border-b md:border-r border-color relative md:grid md:grid-cols-2 md:grid-rows-3 mt-16 md:h-64">
+                        <div className="border-b md:border-r border-color relative md:grid md:grid-cols-2 md:grid-rows-3 mt-10 md:h-60">
                             <div className="flex items-center justify-center border dashed border-color md:h-auto h-20">
                                 <div className="border-t-dashed -top-0 -left-16 w-16"></div>
-                                <div className="border-l-dashed -top-10 -left-0 h-10"></div>
+                                <div className="border-l-dashed -top-6 -left-0 h-6"></div>
                                 <div className="text-center">
                                     <Label>Full name</Label>
                                     <LabelText label="Leomas V. Cardenio" />
