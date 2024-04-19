@@ -4,7 +4,7 @@ import { AkarIconsFacebookFill } from "./Icons/Facebook"
 import { MdiGithub } from "./Icons/Github"
 import { BiInstagram } from "./Icons/Intagram"
 import { BiLinkedin } from "./Icons/LinkedIn"
-import profile from "./assets/IMG_6405_edited.png"
+import profile from "./assets/IMG_6405.jpeg"
 import InViewPage from "./components/InViewPage"
 
 export default function AboutMe({ onView }:{ onView: (inView: boolean) => void }) {
@@ -49,7 +49,7 @@ export default function AboutMe({ onView }:{ onView: (inView: boolean) => void }
                         </div>
 
                         <div className="mt-3 dark:opacity-75 dark:font-light text-center lg:text-left text- sm">
-                            I am a versatile web app developer skilled in both front-end and back-end development. With a strong sense of design and a deep enthusiasm for building smooth user experiences, I create visually stunning and highly functional front-end interfaces. Backed by my proficiency in back-end development, I ensure that the system is powered by seamless and efficient processes, delivering optimal performance and scalability.
+                            I am a versatile web app developer skilled in both front-end and back-end development, creating visually stunning and highly functional front-end interfaces. Backed by my proficiency in back-end development, I ensure that the system is powered by seamless and efficient processes, delivering optimal performance and scalability.
                         </div>
 
                         <div className="border-b md:border-r border-color relative md:grid md:grid-cols-2 md:grid-rows-3 mt-10 md:h-60">
