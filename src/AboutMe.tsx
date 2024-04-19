@@ -33,7 +33,7 @@ export default function AboutMe({ onView }:{ onView: (inView: boolean) => void }
                         </div>
 
                         <div className="w-full xs:w-52 lg:w-full h-52 lg:h-full rounded-md bg-slate-200 dark:bg-slate-800 relative overflow-hidden">
-                            <img src={profile} alt="profile" className="object-cover w-full h-[20rem] lg:h-[40rem]" />
+                            <img src={profile} alt="profile" className="object-cover w-full h-[15rem] lg:h-[34rem]" />
                             <div className="flex items-center gap-3 absolute z-10 left-1/2 -translate-x-1/2 bottom-4 rounded text-[#ececec] bg-white/20 px-2.5 py-1 backdrop-blur-sm border border-white/10">
                                 <a href="https://www.facebook.com/leomas.cardenio" target="_blank"><AkarIconsFacebookFill className="lg:w-7 lg:h-7 w-6 h-6" /></a>
                                 <a href="#"><BiInstagram className="lg:w-7 lg:h-7 w-6 h-6" /></a>
