@@ -1,27 +1,27 @@
 import { MdiLaravel } from "@/Icons/Laravel";
 import { GridCard } from "../Grid";
-import { MdiVuejs } from "@/Icons/Vue";
 import { BxlTailwindCss } from "@/Icons/Tailwind";
 import { SimpleIconsMysql } from "@/Icons/MySQL";
-import AccreditationIMG from "../../assets/Accreditation.png";
+import CBUAMS from "../../assets/CBUAMS.png";
 import { useState } from "react";
 import { MoveLeftIcon } from "lucide-react";
+import { BxlReact } from "@/Icons/React";
 import { ProjectTechBG } from "../component";
 
-export default function Accreditation() {
+export default function Attendance() {
     const [viewDetails, setViewDetails] = useState(false)
 
     return (
-        <GridCard contentClass="h-full relative group transition-150 rounded-br" gradient="green">
+        <GridCard contentClass="h-full relative group transition-150 rounded-br">
             {
                 !viewDetails ?
                 <>
                     <div className="h-full p-2 relative z-20 ring-inset">
                         <div className="p-2.5">
-                            <div className=" font-medium">
-                                Accreditation Management System
+                            <div className="text font-medium">
+                                Attendance Management System
                             </div>
-                            <p className="hidden xxs:block text-color opacity-80 text-sm dark:font-light mt-1">A Document Management System that streamlines the AACCUP accreditation processes of the college.</p>
+                            <p className="hidden xxs:block text-color opacity-80 text-sm dark:font-light mt-1">A training attendance management system that tracks the trainings attended of an employee, and reports the feedbacks of the training.</p>
                             <button onClick={() => setViewDetails(!viewDetails)} className="block xxs:hidden text-xs p-1 px-2 border border-color mt-1">View details</button>
                         </div>
                     </div>
@@ -35,14 +35,15 @@ export default function Accreditation() {
             }
             <ProjectTechBG>
                 <MdiLaravel className="w-6 h-6 text-color" />
-                <MdiVuejs className="w-6 h-6 text-color" />
+                <BxlReact className="w-6 h-6 text-color" />
                 <BxlTailwindCss className="w-6 h-6 text-color" />
                 <SimpleIconsMysql className="w-6 h-6 text-color" />
             </ProjectTechBG>
-            <div className="w-[24rem] absolute z-10 -bottom-10 xxs:-bottom-14 -right-48 xxs:-right-28 xs:-right-20 group-hover:-right-64  xxs:group-hover:-right-32 shadow-2xl border-2 border-green-700 rounded-xl overflow-hidden transition-all-300 group-hover:[transform:none] [transform:perspective(400em)_rotateY(15deg)_rotateX(6deg)_skew(8deg,-4deg)_translate3d(4%,-2%,0)_scale(.86)]">
-                <img src={AccreditationIMG} alt="img" className="object-cover object-left dark:opacity-90" />
+            <div className="w-[24rem] absolute z-10 -bottom-10 xxs:-bottom-14 -right-48 xxs:-right-28 xs:-right-20 group-hover:-right-64 xxs:group-hover:-right-32 shadow-2xl border-2 border-blue-700 rounded-xl overflow-hidden transition-all-300 group-hover:[transform:none] [transform:perspective(400em)_rotateY(15deg)_rotateX(6deg)_skew(8deg,-4deg)_translate3d(4%,-2%,0)_scale(.86)]">
+                <img src={CBUAMS} alt="img" className="object-cover object-left dark:opacity-90" />
+                <div className="absolute top-0 left-4 w-40 h-4 backdrop-blur bg-white/80 dark:bg-gray-100/40"></div>
             </div>
-            <div className="absolute -bottom-20 -left-5 blur-[50px] rounded-full bg-green-500 w-[18rem] h-[11rem] sm:w-52 sm:h-52 opacity-30 dark:opacity-40"></div>
+            <div className="absolute -bottom-20 -left-5 blur-[50px] rounded-full bg-blue-500 w-[18rem] h-[11rem] sm:w-52 sm:h-52 opacity-30 dark:opacity-40"></div>
         </GridCard>
     )
 }

@@ -4,7 +4,7 @@ export default function Main({children, className = "", isOverflowHidden = true,
     return (
         <main
             id={props.id}
-            className={`min-h-screen relative dark:border-slate-800 border-slate-300/70 ${isOverflowHidden&&(typeof isOverflowHidden !== "string")?' overflow-hidden':(isOverflowHidden?isOverflowHidden:'')} ${border} ${className}`}
+            className={`min-h-screen relative dark:border-slate-800 border-slate-300/70 overflow-x-hidden ${isOverflowHidden&&(typeof isOverflowHidden !== "string")?' overflow-hidden':(isOverflowHidden?isOverflowHidden:'')} ${border} ${className}`}
         >
             {props.titleChildren}
             <div className="px-4 sm:px-0">
