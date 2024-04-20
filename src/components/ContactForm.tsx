@@ -2,9 +2,8 @@ import Input from "./Input";
 import TextArea from "./TextArea";
 import { useForm } from "react-hook-form";
 import emailjs from '@emailjs/browser';
-import Swal, { SweetAlertResult } from 'sweetalert2'
+import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import { useEffect } from "react";
 
 export default function ContactForm() {
     interface Inputs {
