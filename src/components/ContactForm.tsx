@@ -1,30 +1,70 @@
 import Input from "./Input";
 import TextArea from "./TextArea";
-import { useForm, SubmitHandler } from "react-hook-form"
-
+import { useForm } from "react-hook-form";
+import emailjs from '@emailjs/browser';
+import Swal, { SweetAlertResult } from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import { useEffect } from "react";
 
 export default function ContactForm() {
-    type Inputs = {
+    interface Inputs {
         name: string,
         email: string,
         message: string,
     }
-    const { register, watch, handleSubmit } = useForm<Inputs>()
+    const { register, watch, handleSubmit, reset } = useForm<Inputs>()
 
     const data = watch()
 
-    const onSubmit: SubmitHandler<Inputs> = (inputData) => {
-        console.log(inputData)
+    const mySwal = withReactContent(Swal)
+
+    const onFormSubmit = (input_data: any) => {
+        const loading = mySwal.fire({
+            text: `Sending...`,
+            toast: true,
+            position: "top-right",
+            showConfirmButton: false,
+            customClass: {
+                popup: 'bg-slate-200/70 dark:bg-[#2d3036] dark:text-[#ececec]'
+            },
+            didOpen: () => {
+                Swal.showLoading();
+            }
+        }) as any;
+        
+        emailjs
+            .send('service_vdyxly9', 'contact_form', input_data, {
+                publicKey: '6No_nFB9sASO2AkeB'
+            })
+            .then(() => {
+                loading.close()
+                mySwal.fire({
+                    text: `Message sent successfully`,
+                    icon: "success",
+                    toast: true,
+                    position: "top-right",
+                    timerProgressBar: true,
+                    timer: 3000,
+                    showConfirmButton: false,
+                    customClass: {
+                        popup: 'bg-slate-200/70 dark:bg-[#2d3036] dark:text-[#ececec]'
+                    }
+                });
+            }, (error) => {
+                console.log('FAILED...', error.text);
+            });
+        
+        reset()
     }
 
     return (
         <div className="sm:px-4 py-4 lg:py-0 w-full">
-            <form action="" onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onFormSubmit)}>
                 <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 group">
                     <Input {...register('name', { required: "Name is required" })} placeholder="Name" className="w-full border-b focus-within:border-solid placeholder-shown:dashed border-color placeholder:font-light text-sm transition-200 focus:bg-slate-200 placeholder-shown:bg-transparent placeholder-shown:dark:bg-transparent bg-slate-200 dark:bg-color dark:focus:bg-color" />
                     <div className={`hidden md:block border-l dashed group-focus-within:border-solid group-focus-within:dark:border-[#ececec]/25 ${data.name || data.email ? '!border-solid dark:!border-[#ececec]/25' : ''}`} />
                     <Input {...register('email', {
-                        required: "Email is required", 
+                        required: "Email is required",
                         pattern: {
                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                             message: "Invalid email address"
