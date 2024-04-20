@@ -18,13 +18,14 @@ export default function ContactForm() {
     const mySwal = withReactContent(Swal)
 
     const onFormSubmit = (input_data: any) => {
+        const customCss = '!bg-slate-200/70 dark:!bg-[#2d3036] dark:!text-[#ececec] !text-slate-700';
         const loading = mySwal.fire({
             text: `Sending...`,
             toast: true,
             position: "top-right",
             showConfirmButton: false,
             customClass: {
-                popup: 'bg-slate-200/70 dark:bg-[#2d3036] dark:text-[#ececec]'
+                popup: customCss
             },
             didOpen: () => {
                 Swal.showLoading();
@@ -46,7 +47,7 @@ export default function ContactForm() {
                     timer: 3000,
                     showConfirmButton: false,
                     customClass: {
-                        popup: 'bg-slate-200/70 dark:bg-[#2d3036] dark:text-[#ececec]'
+                        popup: customCss
                     }
                 });
             }, (error) => {
