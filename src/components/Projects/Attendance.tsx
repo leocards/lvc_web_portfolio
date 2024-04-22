@@ -7,6 +7,7 @@ import { useState } from "react";
 import { MoveLeftIcon } from "lucide-react";
 import { BxlReact } from "@/Icons/React";
 import { ProjectTechBG } from "../component";
+import TooltipButton from "../Tooltip";
 
 export default function Attendance() {
     const [viewDetails, setViewDetails] = useState(false)
@@ -21,7 +22,9 @@ export default function Attendance() {
                             <div className="text font-medium">
                                 Attendance Management System
                             </div>
-                            <p className="hidden xxs:block text-color opacity-80 text-sm dark:font-light mt-1">A training attendance management system that tracks the trainings attended of an employee, and reports the feedbacks of the training.</p>
+                            <p className="hidden xxs:block text-color opacity-80 text-sm dark:font-light mt-1">
+                                <div className="line-clamp- h-fit">A training attendance management system that tracks the trainings attended of an employee, and reports the feedbacks of the training.</div>
+                            </p>
                             <button onClick={() => setViewDetails(!viewDetails)} className="block xxs:hidden text-xs p-1 px-2 border border-color mt-1">View details</button>
                         </div>
                     </div>
@@ -34,10 +37,10 @@ export default function Attendance() {
                 </div>
             }
             <ProjectTechBG>
-                <MdiLaravel className="w-6 h-6 text-color" />
-                <BxlReact className="w-6 h-6 text-color" />
-                <BxlTailwindCss className="w-6 h-6 text-color" />
-                <SimpleIconsMysql className="w-6 h-6 text-color" />
+                <TooltipButton tooltip="Laravel"><MdiLaravel className="w-6 h-6 text-color" /></TooltipButton>
+                <TooltipButton tooltip="React"><BxlReact className="w-6 h-6 text-color" /></TooltipButton>
+                <TooltipButton tooltip="TailwindCss"><BxlTailwindCss className="w-6 h-6 text-color" /></TooltipButton>
+                <TooltipButton tooltip="MySQL"><SimpleIconsMysql className="w-6 h-6 text-color" /></TooltipButton>
             </ProjectTechBG>
             <div className="w-[24rem] absolute z-10 -bottom-10 xxs:-bottom-14 -right-48 xxs:-right-28 xs:-right-20 group-hover:-right-64 xxs:group-hover:-right-32 shadow-2xl border-2 border-blue-700 rounded-xl overflow-hidden transition-all-300 group-hover:[transform:none] [transform:perspective(400em)_rotateY(15deg)_rotateX(6deg)_skew(8deg,-4deg)_translate3d(4%,-2%,0)_scale(.86)]">
                 <img src={CBUAMS} alt="img" className="object-cover object-left dark:opacity-90" />

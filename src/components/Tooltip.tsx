@@ -6,10 +6,10 @@ import {
 } from "@/components/ui/tooltip"
 import React from "react"
 
-export default function TooltipButton({tooltip, children}:{tooltip: string, children: React.ReactNode}) {
+export default function TooltipButton({tooltip, delay = 0, children}:{tooltip: string, delay?: number, children: React.ReactNode}) {
     return (
         <TooltipProvider>
-            <Tooltip>
+            <Tooltip delayDuration={delay}>
                 <TooltipTrigger>{children}</TooltipTrigger>
                 <TooltipContent>
                     <p>{tooltip}</p>
