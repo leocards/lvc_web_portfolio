@@ -5,13 +5,9 @@ import TooltipButton from "./components/Tooltip";
 import { BxlJavascript } from "./Icons/Javascript";
 import { MdiLaravel } from "./Icons/Laravel";
 import { SimpleIconsMysql } from "./Icons/MySQL";
-import { LogosNextjs } from "./Icons/NextJs";
 import { AkarIconsPhpFill } from "./Icons/PHP";
-import { BxlPostgresql } from "./Icons/PostgresSql";
-import { BxlPython } from "./Icons/Python";
 import { BxlReact } from "./Icons/React";
 import { BxlTailwindCss } from "./Icons/Tailwind";
-import { MdiLanguageTypescript } from "./Icons/Typescript";
 
 export default function Skills({ onView }:{ onView: (inView: boolean) => void }) {
     return (
@@ -30,15 +26,15 @@ export default function Skills({ onView }:{ onView: (inView: boolean) => void })
                                     <TooltipButton tooltip="JavaScript">
                                         <BxlJavascript className="h-8 sm:h-12 w-8 sm:w-12" />
                                     </TooltipButton>
-                                    <TooltipButton tooltip="TypeScript">
+                                    {/* <TooltipButton tooltip="TypeScript">
                                         <MdiLanguageTypescript className="h-8 sm:h-12 w-8 sm:w-12" />
-                                    </TooltipButton>
+                                    </TooltipButton> */}
                                     <TooltipButton tooltip="React.Js">
                                         <BxlReact className="h-8 sm:h-12 w-8 sm:w-12" />
                                     </TooltipButton>
-                                    <TooltipButton tooltip="Next.Js">
+                                    {/* <TooltipButton tooltip="Next.Js">
                                         <LogosNextjs className="h-14 w-14" />
-                                    </TooltipButton>
+                                    </TooltipButton> */}
                                 </Grid>
                             </div>
                         </div>
@@ -49,9 +45,9 @@ export default function Skills({ onView }:{ onView: (inView: boolean) => void })
                                     <TooltipButton tooltip="PHP">
                                         <AkarIconsPhpFill className="h-8 sm:h-12 w-8 sm:w-12" />
                                     </TooltipButton>
-                                    <TooltipButton tooltip="Python">
+                                    {/* <TooltipButton tooltip="Python">
                                         <BxlPython className="h-8 sm:h-12 w-8 sm:w-12" />
-                                    </TooltipButton>
+                                    </TooltipButton> */}
                                     <TooltipButton tooltip="Laravel">
                                         <MdiLaravel className="h-8 sm:h-12 w-8 sm:w-12" />
                                     </TooltipButton>
@@ -65,9 +61,9 @@ export default function Skills({ onView }:{ onView: (inView: boolean) => void })
                                     <TooltipButton tooltip="MySql">
                                         <SimpleIconsMysql className="h-8 sm:h-12 w-8 sm:w-12" />
                                     </TooltipButton>
-                                    <TooltipButton tooltip="PostgeSQL">
+                                    {/* <TooltipButton tooltip="PostgeSQL">
                                         <BxlPostgresql className="h-8 sm:h-12 w-8 sm:w-12" />
-                                    </TooltipButton>
+                                    </TooltipButton> */}
                                 </Grid>
                             </div>
                         </div>

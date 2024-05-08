@@ -16,6 +16,5 @@ export default function TooltipButton({tooltip, delay = 0, children}:{tooltip: s
                 </TooltipContent>
             </Tooltip>
         </TooltipProvider>
-
     )
 }
