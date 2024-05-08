@@ -41,7 +41,7 @@ export default function Skills({ onView }:{ onView: (inView: boolean) => void })
                         <div className="text-center flex flex-col w-full">
                             <Label className="py-4 w-full border-b border-t !border-t-transparent border-r dashed inline-block text-center">Back-End</Label>
                             <div className="grow flex items-center lg:border-r dashed p-2 min-h-[7rem]">
-                                <Grid>
+                                <Grid grids={2}>
                                     <TooltipButton tooltip="PHP">
                                         <AkarIconsPhpFill className="h-8 sm:h-12 w-8 sm:w-12" />
                                     </TooltipButton>
@@ -57,7 +57,7 @@ export default function Skills({ onView }:{ onView: (inView: boolean) => void })
                         <div className="text-center flex flex-col w-full">
                             <Label className="py-4 w-full border-b border-t lg:border-r border-l lg:border-l-0 dashed inline-block text-center">Database</Label>
                             <div className="grow flex items-center p-2 min-h-[7rem] border-l lg:border-l-0 dashed">
-                                <Grid grids={2}>
+                                <Grid grids={1}>
                                     <TooltipButton tooltip="MySql">
                                         <SimpleIconsMysql className="h-8 sm:h-12 w-8 sm:w-12" />
                                     </TooltipButton>
